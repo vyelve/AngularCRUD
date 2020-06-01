@@ -1,0 +1,23 @@
+<div class="container">
+    <h3 class="d-flex justify-content-center"> {{title}}</h3>
+    <h5 class="d-flex justify-content-center"> Employee Dashborad</h5>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button class="m-1 btn btn-light btn-outline-primary" Button (click)="loadDepartmentComponent()">
+                    Department
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="m-1 btn btn-light btn-outline-primary" (click)="loadEmployeeComponent()">
+                    Employee
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <app-department *ngIf="loadDept"></app-department>
+    <app-employee *ngIf="loadEmp"></app-employee>
+</div>
+<!-- <router-outlet></router-outlet> -->
